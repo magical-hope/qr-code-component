@@ -1,0 +1,116 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+    /* Brand/Accent Palette */
+    --black-700: black;
+
+    /* Neutral Palette */
+    --white-700: hsl(0, 0%, 100%);
+    --slate-300: hsl(212, 45%, 89%);
+    --slate-500: hsl(216, 15%, 48%);
+    --slate-900: hsl(216, 15%, 48%, 0.1);
+
+    /* Accent */
+    --color-accent-text: var(--black-700);
+
+    /* Neutrals */
+    --color-neutral-bg: var(--slate-300);
+    --color-neutral-surface: var(--white-700);
+    --color-neutral-box-shadow: var(--slate-900);
+    --color-neutral-text-muted: var(--slate-500);
+
+    /* border radius */
+    --border-radius-1: 1.05rem;
+    --border-radius-2: 1.2rem;
+
+    /* padding */
+    --padding-1: 1rem;
+    --padding-2: 1.05rem;
+}
+
+body {
+    /* CSS Reset, Make the line-height more reader friendly */
+    line-height: 1.6;
+    margin: auto 0;
+    
+    font-family: Outfit, sans-serif;
+    font-size: 15px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.container {
+    background-color: var(--color-neutral-bg);
+    display: grid;
+    place-items: center;
+    max-width: 1440px;
+    margin: auto;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.qr-output-wrapper {
+    background-color: var(--color-neutral-surface);
+    border-top-left-radius: var(--border-radius-1);
+    border-top-right-radius: var(--border-radius-1);
+    border-bottom-left-radius: var(--border-radius-2);
+    border-bottom-right-radius: var(--border-radius-2);
+    box-shadow: 0 4px 8px var(--color-neutral-box-shadow);
+    display: grid;
+    place-items: center;
+    padding: var(--padding-1);
+    max-width: 340px;
+    width: 86%;
+}
+
+.qr-img-wrapper {
+    width: 100%;
+}
+
+img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+h3 {
+    color: var(--color-accent-text);
+    font-size: 1.3rem;
+    font-weight: 700;
+    /* CSS Reset, Set tighter line heights on headings & interactive elements */
+    line-height: 1.1;
+    padding-inline: var(--padding-2);
+    margin-bottom: 0;
+}
+
+p {
+    color: var(--color-neutral-text-muted);
+    font-weight: 400;
+    padding-inline: var(--padding-2);
+}
+
+/* footer */
+.attribution {
+      font-size: 0.6875rem;
+      padding-block: var(--padding-1);
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+      text-decoration: none;
+    }
+
+/* media queries */
+@media screen and (max-width:350px) {
+    h3 {
+    font-size: 1.05rem;
+    padding-inline: 0;
+}
+
+p {
+    font-size: 0.8rem;
+    padding-inline: 0;
+}
+}
